@@ -1,5 +1,5 @@
 #To-Do-List-Right-Side {
-
+    
     float: right;
     flex-direction: column;
     border-bottom-left-radius: 10px;
@@ -30,7 +30,7 @@
     border-width: 5px;
     border-style: solid;
     border-color: black; 
-    background-color: cadetblue;
+    background-color: rgb(55, 162, 174);
     z-index: 1;
 }
 
@@ -87,7 +87,7 @@ body {
 #AddToDoNotes {
 
     width: 90%;
-    height: 350px;
+    height: 300px;
     padding: 6px 10px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -107,7 +107,7 @@ body {
 
 #spotify-player {
 
-    margin-top: 10px;
+    margin-top: 15px;
     margin-left: 10px;
     margin-bottom: 10px;
     z-index: 1;
