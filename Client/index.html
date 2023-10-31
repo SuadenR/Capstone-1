@@ -6,13 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your to do list!</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        
+        #vanta-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+            
+        }
+        
+        #vanta-canvas canvas {
+            width: 100%;
+            height: 100%;
+            
+        }
+    </style>
 </head>
 <body>
 
-    <iframe id="spotify-player" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7tgv8iwkFOGYLfaihFBH70?utm_source=generator&theme=0" width="98%" height="155" frameBorder="5" allowfullscreen="" allow="autoplay-off; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    <span class="resize-text">
+    <div id="vanta-canvas"></div>
 
-    <section id = "Add-To-Do-List-Left-Side">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+        <script>
+        VANTA.NET({
+          el: "#vanta-canvas",
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.00,
+          minWidth: 200.00,
+          scale: 1.00,
+          scaleMobile: 1.00,
+          color: 0x5ecdd4,
+          backgroundColor: 0x4218a0,
+          points: 13.00,
+          maxDistance: 22.00,
+          spacing: 16.00,
+          fullscreen: true
+          
+        })
+        </script>
+
+    <iframe id="spotify-player" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWQRwui0ExPn?utm_source=generator" width="98%" height="155" frameBorder="5" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+    <div id = "Add-To-Do-List-Left-Side">
 
         <h1>Add to your to do list!</h1>
         <form id="AddToDoForm">
@@ -24,21 +69,25 @@
             <button id="AddToDoBtn">Submit</button>
         </form>
 
-        </section>
-        <section id= "To-Do-List-Right-Side-Container">
+    </div>
+        <div id= "To-Do-List-Right-Side-Container">
         
         <h2 id=>Your To Do List!</h2>
-        </section>
+        </div>
     </span>
-    </section>
+</div>
 
-    <section id="Completed-Tasks-Container">
+    <div id="Completed-Tasks-Container">
 
         <h3>Completed Tasks</h3>
 
-    </section>
+    </div>
+
     
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>
+
+    
+
 </body>
 </html>
