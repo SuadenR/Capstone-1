@@ -29,6 +29,7 @@ module.exports = {
         note_id++
 
         res.status(200).send(notes)
+        
     },
 
     deleteTask: (req, res) => {

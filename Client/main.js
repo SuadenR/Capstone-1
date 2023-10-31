@@ -34,12 +34,15 @@ function submitHandler(e) {
 }
 
 function createTaskCard(note) {
-    const taskCard = document.createElement('div')
+
+    const taskCard = document.createElement('div');
+
     taskCard.classList.add('task-card')
 
     taskCard.innerHTML = `<p class="note">${note.tasks}</p>
     <div class="btns-container">
     <button onclick="deleteTask(${note.id})">delete</button>
+    </div>
     `
 }
 
