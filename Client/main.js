@@ -43,17 +43,17 @@ function createTaskCard(note) {
     `
 }
 
-function getAllTasks(arr) {
+// function getAllTasks(arr) {
 
-    newTasksContainer.innerHTML = ''
+//     newTasksContainer.innerHTML = ''
 
-    for (let i = 0; i < arr.length; i++) {
-        createTaskCard(arr[i])
-    }
-}
+//     for (let i = 0; i < arr.length; i++) {
+//         createTaskCard(arr[i])
+//     }
+// }
 
 
 
 newTaskForm.addEventListener('submit', submitHandler)
 
-getAllTasks()
+// getAllTasks()
