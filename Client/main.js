@@ -6,7 +6,7 @@ const baseURL = `http://localhost:4000/api/ToDoList`
 const newTaskCallBack = ({ data: notes }) => displayTasks(notes)
 const errCallback = err => console.log(err)
 
-const getAllTasks = () => axios.get(baseURL).then(newTaskCallBack).catch(errCallback)
+// const getAllTasks = () => axios.get(baseURL).then(newTaskCallBack).catch(errCallback)
 const createTask = body => axios.post(baseURL, body).then(newTaskCallBack).catch(errCallback)
 const deleteTask = id => axios.delete(`${baseURL}/${id}`).then(newTaskCallBack).catch(errCallback)
 
@@ -14,16 +14,17 @@ function submitHandler(e) {
     e.preventDefault()
 
     let tasks = document.querySelector('#AddToDo')
-    let due_date = document.querySelector('#AddToDoDate')
     let notes = document.querySelector(`#AddToDoNotes`)
+    let due_date = document.querySelector('#AddToDoDate')
 
     let bodyObj = {
         tasks: tasks.value,
+        notes: notes.value,
         due_date: due_date.value,
-        notes: notes.value 
+         
     }
 
-    createTask(bodyObj)
+    addTask(bodyObj)
 
     tasks.value = ''
     due_date.value = ''
@@ -41,8 +42,17 @@ function createTaskCard(note) {
     `
 }
 
+// function getAllTasks(arr) {
+
+//     newTasksContainer.innerHTML = ''
+
+//     for (let i = 0; i < arr.length; i++) {
+//         createTaskCard(arr[i])
+//     }
+// }
 
 
-newTaskForm.addEventListener('click', submitHandler)
 
-getAllTasks()
+newTaskForm.addEventListener('submit', submitHandler)
+
+// getAllTasks()

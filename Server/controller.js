@@ -3,7 +3,7 @@ let notes = []
 
     module.exports = {
 
-    getTasks: (req, res) => res.status(200).send(notes),
+    // getTasks: (req, res) => res.status(200).send(notes),
 
     deleteTask: (req, res) => {
 
@@ -17,6 +17,8 @@ let notes = []
     addTask: (req, res) => {
 
         let { tasks, due_date, notes } = req.body
+        
+        console.log(req.body)
 
         let newNote = {
             id: note_id,
@@ -26,7 +28,11 @@ let notes = []
         }
 
         notes.push(newNote)
+        console.log(newNote)
+        rollbar.info('Someone added a note!')
+
         note_id++
+
         res.status(200).send(notes)       
     },
 
