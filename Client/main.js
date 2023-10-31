@@ -1,7 +1,7 @@
 const newTasksContainer = document.querySelector("#To-Do-List-Right-Side-Container")
 const newTaskForm = document.getElementById("AddToDoBtn")
 
-const baseURL = `http://localhost:5432/api/ToDoList`
+const baseURL = `http://localhost:4000/api/ToDoList`
 
 const newTaskCallBack = ({ data: notes }) => displayTasks(notes)
 const errCallback = err => console.log(err)
