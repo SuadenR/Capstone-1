@@ -15,9 +15,9 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(`${__dirname}/public`))
 
-const { addTask, deleteTask, getTasks } = require('./controller')
+const { createTask, deleteTask, getTasks } = require('./controller')
 
-app.post(`/api/ToDoList`, addTask)
+app.post(`/api/ToDoList`, createTask)
 app.delete(`/api/ToDoList/:id`, deleteTask)
 app.get(`/api/ToDoList`, getTasks)
 

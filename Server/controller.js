@@ -1,9 +1,35 @@
-let note_id = 5
 let notes = []
+let note_id = 1
 
-    module.exports = {
+module.exports = {
 
-    // getTasks: (req, res) => res.status(200).send(notes),
+    getTasks: (req, res) => res.status(200).send(notes),
+
+    createTask: (req, res) => {
+
+        let { tasks, due_date, notes } = req.body
+
+        console.log(req.body)
+
+        let newNote = {
+
+        id: note_id,
+        tasks: tasks,
+        due_date: due_date,
+        notes: notes
+
+        }
+
+        notes.push(newNote)
+
+        console.log(newNote)
+
+        rollbar.info('Someone added a note!')
+
+        note_id++
+
+        res.status(200).send(notes)
+    },
 
     deleteTask: (req, res) => {
 
@@ -12,31 +38,7 @@ let notes = []
         notes.splice(index, 1)
 
         res.status(200).send(notes)
-    },
-    
-    addTask: (req, res) => {
 
-        let { tasks, due_date, notes } = req.body
-        
-        console.log(req.body)
-
-        let newNote = {
-            id: note_id,
-            tasks: tasks.value,
-            due_date: due_date.value,
-            notes: notes.value
-        }
-
-        notes.push(newNote)
-        console.log(newNote)
-        rollbar.info('Someone added a note!')
-
-        note_id++
-
-        res.status(200).send(notes)       
     },
 
-
-
-    
-}
+    }
