@@ -1,9 +1,21 @@
 let note_id = 5
-const notes = []
+let notes = []
 
-module.exports = {
+    module.exports = {
+
+    getTasks: (req, res) => res.status(200).send(notes),
+
+    deleteTask: (req, res) => {
+
+        let index = notes.findIndex(elem => elem.id === +req.params.id)
+
+        notes.splice(index, 1)
+
+        res.status(200).send(notes)
+    },
     
     addTask: (req, res) => {
+
         let { tasks, due_date, notes } = req.body
 
         let newNote = {
@@ -14,10 +26,11 @@ module.exports = {
         }
 
         notes.push(newNote)
-
         note_id++
-
         res.status(200).send(notes)       
     },
+
+
+
     
 }
