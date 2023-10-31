@@ -1,0 +1,104 @@
+#To-Do-List-Right-Side {
+
+    float: right;
+    flex-direction: column;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black;
+    overflow: right;
+    background-color: cadetblue;
+
+} 
+#Add-To-Do-List-Left-Side {
+
+    width: 250px;
+    height: relative;
+    margin-left: 25px;
+    padding-bottom: 20px;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black; 
+    background-color: cadetblue;
+}
+
+#Completed-Tasks {
+    
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black;
+
+}
+body {
+
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+#AddToDo {
+
+    width: 90%;
+    height: 150px;
+    padding: 6px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    resize: none;
+
+}
+
+#AddToDoDate {
+
+
+    width: 90%;
+    padding: 6px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    word-wrap: break-word;
+
+}
+
+#AddToDoNotes {
+
+    width: 90%;
+    height: 350px;
+    padding: 6px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    resize: none;
+
+}
+
+#resize-text {
+
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: full-width;
+
+
+}
+
+#spotify-player {
+
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+
+}
