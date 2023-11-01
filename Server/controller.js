@@ -13,7 +13,7 @@ module.exports = {
 
     createTask: (req, res) => {
 
-        if ( note_id > 20 ) {
+        if ( notes.length > 20 ) {
 
         res.status(400).send('You cannot add anymore tasks! Complete some!')
 
@@ -59,9 +59,10 @@ module.exports = {
 
         console.log(completedTasks)
 
-        res.status(200).send(completedTasks)
+        res.status(200).send(notes)
 
-      }
+    
+     }
 
 
     }

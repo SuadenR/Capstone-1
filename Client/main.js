@@ -5,12 +5,12 @@ const completedTaskContainer = document.querySelector("#Completed-Task-Container
 const baseURL = `http://localhost:4000/api/ToDoList`
 
 const newTaskCallBack = ({ data: notes }) => displayTasks(notes)
-const completeCallBack = ({ data: completedTasks }) => displayCompletedTasks(completedTasks)
+// const completeCallBack = ({ data: completedTasks }) => displayCompletedTasks(completedTasks)
 const errCallback = err => console.log(err)
 
 const createTask = body => axios.post(baseURL, body).then(newTaskCallBack).catch(errCallback)
 const deleteTask = id => axios.delete(`${baseURL}/${id}`).then(newTaskCallBack).catch(errCallback)
-const completeTask = id => axios.put(`${baseURL}/completed/${id}`).then(completeCallBack).catch(errCallback)
+const completeTask = id => axios.put(`${baseURL}/completed/${id}`).then(newTaskCallBack).catch(errCallback)
 
 function submitHandler(e) {
     e.preventDefault()
@@ -33,6 +33,7 @@ function submitHandler(e) {
 }
 
 function createTaskCard(note) {
+    
     const taskCard = document.createElement('div');
 
     taskCard.classList.add('task-card')
