@@ -1,8 +1,7 @@
 #To-Do-List-Right-Side {
-    
-    
+
+
     float: right;
-    flex-direction: column;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
@@ -16,6 +15,14 @@
     font-family: Arial, Helvetica, sans-serif;
 
 } 
+
+#To-Do-List-Right-Side-Container {
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+}
 
 #Add-To-Do-List-Left-Side {
 
@@ -40,7 +47,7 @@
 }
 
 #Completed-Tasks {
-    
+
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -66,7 +73,7 @@ body {
 #AddToDo {
 
     width: 90%;
-    height: 150px;
+    height: 125px;
     padding: 6px 10px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -92,7 +99,7 @@ body {
 #AddToDoNotes {
 
     width: 90%;
-    height: 275px;
+    height: 225px;
     padding: 6px 10px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -125,30 +132,63 @@ body {
     height: 100vh;
     width: 100vh;
     background-size: cover;
- 
+
 }
 
 #To-Do-List-Right-Side-Container {
 
+    display: flex;
+    flex-direction: row;
+    align-self: auto;
+    overflow-wrap: normal;
+    gap: 8px;
+    background-color: transparent;
     position: absolute;
     height: 78%;
     width: 84%;
     margin-left: 15%;
     margin-right: 10px;
-    border: 5px outset red;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 32pt;
+    font-size: 12pt;
     color: white;
     z-index: 1;
+
 }
 
-/* #Completed-Tasks-Container {
+#button {
 
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 32pt;
-    color: white;
-    z-index: 12
+    display: inline-block;
+    border-radius: 8px;
+    border: none;
+    text-align: center;
+    font-size: 14px;
+    padding: 2px;
+    width: 200px;
+    cursor: pointer;
+    margin: 5px;
 
-} */
+}
+#new-notes {
+
+    background-color: rgb(55, 162, 174);
+    padding: 5px;
+    width: 385px;
+    height: 225px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+#btns {
+
+    background-color: transparent;
+    border: 0;
+    position: relative;
+    right:   -175px ;
+    bottom:   -175px;
+
+
+}
 
 
