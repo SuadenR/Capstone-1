@@ -10,7 +10,7 @@ const errCallback = err => console.log(err)
 
 const createTask = body => axios.post(baseURL, body).then(newTaskCallBack).catch(errCallback)
 const deleteTask = id => axios.delete(`${baseURL}/${id}`).then(newTaskCallBack).catch(errCallback)
-const completeTask = id => axios.put(`${baseURL}/client/completed/${id}`).then(completeCallBack).catch(errCallback)
+const completeTask = id => axios.put(`${baseURL}/completed/${id}`).then(completeCallBack).catch(errCallback)
 
 function submitHandler(e) {
     e.preventDefault()

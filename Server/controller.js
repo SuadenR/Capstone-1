@@ -13,7 +13,7 @@ module.exports = {
 
     createTask: (req, res) => {
 
-        if ( note_id > 12 ) {
+        if ( note_id > 20 ) {
 
         res.status(400).send('You cannot add anymore tasks! Complete some!')
 
@@ -53,13 +53,13 @@ module.exports = {
 
     moveToCompleted: (req, res) => {
 
-        let index = notes.findIndex(elem => elem.id === +req.params.id);
+        let index = notes.findIndex(elem => elem.id === +req.params.id)
 
-        completedTasks.push(notes.splice(index, 1));
+        completedTasks.push(notes.splice(index, 1))
 
         console.log(completedTasks)
 
-        res.status(200).send(completedTasks);
+        res.status(200).send(completedTasks)
 
       }
 
