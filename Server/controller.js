@@ -11,13 +11,17 @@ var rollbar = new Rollbar({
 
 module.exports = {
 
+    getTasks: (req, res) => res.status(200).send(notes),
+
+    getCompletedTasks: (req, res) => res.status(200).send(completedTasks),
+
     createTask: (req, res) => {
 
-        if ( notes.length > 20 ) {
+        if ( notes.length >= 20 ) {
 
         res.status(400).send('You cannot add anymore tasks! Complete some!')
 
-        rollbar.info('Fix your website! You can only have 12 tasks! I am busy!')
+        rollbar.info('Fix your website! You can only have 20 tasks! I am busy!')
 
         }    else   {
 
@@ -56,8 +60,6 @@ module.exports = {
         let index = notes.findIndex(elem => elem.id === +req.params.id)
 
         completedTasks.push(notes.splice(index, 1))
-
-        console.log(completedTasks)
 
         res.status(200).send(notes)
 
