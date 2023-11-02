@@ -17,11 +17,12 @@ module.exports = {
 
     createTask: (req, res) => {
 
-        if ( notes.length >= 20 ) {
+        if ( notes.length >= 12 ) {
+
+        rollbar.info('Fix your website! You can only have 20 tasks! I am busy!')
 
         res.status(400).send('You cannot add anymore tasks! Complete some!')
 
-        rollbar.info('Fix your website! You can only have 20 tasks! I am busy!')
 
         }    else   {
 

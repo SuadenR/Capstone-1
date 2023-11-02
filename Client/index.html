@@ -64,10 +64,10 @@
         <h1>Add to your to do list!</h1>
         <form id="AddToDoForm">
 
-            <textarea type="text" id="AddToDo" placeholder="What do you need to do?" autofocus></textarea>
-            <textarea type="text" id="AddToDoNotes" placeholder="Additional notes"></textarea>
+            <textarea type="text" maxlength="100" id ="AddToDo" placeholder ="What do you need to do?" autofocus></textarea>
+            <textarea type="text" maxlength="180" id ="AddToDoNotes" placeholder ="Additional notes"></textarea>
             <h3>When do you want it done by?</h3>
-            <input type="datetime-local" id="AddToDoDate">
+            <input type="datetime-local" maxlength="18" id="AddToDoDate">
             <button id = "button"  type ="submit">Submit</button>
         </form>
 
